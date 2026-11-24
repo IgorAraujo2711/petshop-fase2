@@ -1,0 +1,125 @@
+/* ==========================================================
+   PetAmigo Petshop - Fase 2
+   Estilos próprios, aplicados SOBRE o Bootstrap 5.
+   Organização: 1) variáveis  2) base  3) componentes
+                4) acessibilidade  5) alto contraste
+   ========================================================== */
+
+/* 1) Variáveis de cor e fonte (paleta do petshop) */
+:root{
+  --ink:#16262b;
+  --muted:#52656b;
+  --teal:#0f4c4a;
+  --teal-dark:#0a3533;
+  --sun:#f2b134;
+  --sun-soft:#fdf0d0;
+  --mist:#eef4f4;
+  --line:#d6e2e2;
+  --radius:14px;
+  --font-head:"Bricolage Grotesque","Trebuchet MS",Arial,sans-serif;
+  --font-body:"Nunito Sans","Segoe UI",Arial,sans-serif;
+}
+
+/* 2) Base */
+body{font-family:var(--font-body);color:var(--ink);background:var(--mist);line-height:1.6}
+h1,h2,h3,h4{font-family:var(--font-head);color:var(--teal-dark);line-height:1.15}
+h1{font-weight:800;letter-spacing:-.02em}
+a{color:var(--teal)}
+.text-muted-pet{color:var(--muted)}
+
+/* Foco visível para quem navega só pelo teclado */
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,
+.btn-check:focus-visible + .btn{outline:3px solid var(--sun);outline-offset:2px;box-shadow:none}
+
+/* Link "pular para o conteúdo" (leitores de tela e teclado) */
+.pular{position:absolute;left:-999px;top:0;background:var(--sun);color:var(--teal-dark);padding:.6rem 1rem;z-index:2000;font-weight:700}
+.pular:focus{left:0}
+
+/* 3) Componentes */
+.barra-topo{background:var(--teal-dark);color:#dcebea;font-size:.9rem}
+.barra-topo a{color:#fff}
+.barra-topo .btn{--bs-btn-padding-y:.1rem;--bs-btn-padding-x:.5rem;--bs-btn-font-size:.85rem;color:#fff;border-color:rgba(255,255,255,.5)}
+.barra-topo .btn:hover{background:#fff;color:var(--teal-dark)}
+
+.navbar-pet{background:#fff;border-bottom:1px solid var(--line)}
+.navbar-pet .navbar-brand{font-family:var(--font-head);font-weight:800;color:var(--teal-dark);display:flex;align-items:center;gap:.5rem}
+.navbar-pet .navbar-brand svg{width:36px;height:36px}
+.navbar-pet .nav-link{color:var(--ink);font-weight:600;border-radius:999px;padding:.45rem .8rem}
+.navbar-pet .nav-link:hover{background:var(--mist)}
+.navbar-pet .nav-link.active,.navbar-pet .nav-link[aria-current="page"]{background:var(--teal);color:#fff}
+
+.btn-pet{background:var(--sun);color:var(--teal-dark);font-weight:700;border:2px solid var(--sun);border-radius:999px;padding:.7rem 1.4rem}
+.btn-pet:hover{background:#ffc552;border-color:#ffc552;color:var(--teal-dark)}
+.btn-pet-outline{border:2px solid var(--teal);color:var(--teal);font-weight:700;border-radius:999px;padding:.7rem 1.4rem;background:transparent}
+.btn-pet-outline:hover{background:var(--teal);color:#fff}
+
+/* Carrossel */
+.slide{min-height:400px;display:flex;align-items:center;padding:2.5rem 0 3.5rem}
+.slide h2{font-size:clamp(1.8rem,4vw,2.8rem);color:var(--teal-dark)}
+.slide p{color:var(--ink);font-size:1.15rem}
+.slide-1{background:#dff1ef}
+.slide-2{background:#fdf0d0}
+.slide-3{background:#e4defa}
+.slide-img{max-height:300px;border-radius:var(--radius)}
+.carousel-controles{background:#fff;border-bottom:1px solid var(--line)}
+
+/* Cartões de produto, serviço e categoria */
+.card-pet{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;height:100%;background:#fff}
+.card-pet img{aspect-ratio:4/3;object-fit:cover;background:var(--mist)}
+.preco{font-family:var(--font-head);font-size:1.7rem;font-weight:800;color:var(--teal-dark)}
+.preco small{font-family:var(--font-body);font-size:.9rem;font-weight:600;color:var(--muted)}
+.categoria{display:block;text-decoration:none;color:inherit;background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:1.5rem;height:100%;transition:border-color .15s,background .15s}
+.categoria:hover{border-color:var(--teal);background:var(--sun-soft)}
+.categoria svg{width:44px;height:44px;margin-bottom:.7rem}
+.linha-preco{display:flex;justify-content:space-between;border-top:1px solid var(--line);padding:.7rem 0}
+.linha-preco b{font-family:var(--font-head);font-size:1.25rem;color:var(--teal-dark)}
+.linha-preco.destaque{background:var(--sun-soft);margin-inline:-1rem;padding-inline:1rem}
+
+.titulo-pagina{background:#fff;border-bottom:1px solid var(--line);padding:2.2rem 0 1.6rem}
+.faixa{background:var(--teal);color:#fff;padding:3rem 0}
+.faixa h2{color:#fff}
+.passo{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:1.3rem;height:100%}
+.passo .num{display:grid;place-items:center;width:2.2rem;height:2.2rem;border-radius:50%;background:var(--teal);color:#fff;font-family:var(--font-head);font-weight:800;margin-bottom:.7rem}
+
+/* Formulários */
+.form-pet{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:1.5rem}
+.form-pet legend{font-family:var(--font-head);font-weight:700;color:var(--teal-dark);font-size:1.3rem}
+.form-label{font-weight:700}
+.opcao-servico .btn{width:100%;text-align:left;border:2px solid var(--line);border-radius:var(--radius);padding:1rem;background:#fff;color:var(--ink)}
+.btn-check:checked + .btn{border-color:var(--teal);background:var(--sun-soft)}
+.btn-horario{--bs-btn-padding-x:.4rem;border:2px solid var(--line);background:#fff;color:var(--ink);font-weight:700;border-radius:10px}
+.btn-check:checked + .btn-horario{background:var(--teal);color:#fff;border-color:var(--teal)}
+.btn-check:disabled + .btn-horario{opacity:.45;text-decoration:line-through}
+.resumo{position:sticky;top:1rem;background:var(--sun-soft);border-radius:var(--radius);padding:1.3rem}
+.resumo dt{font-weight:700;color:var(--teal-dark)}
+.resumo dd{margin-bottom:.6rem}
+.resumo .total{font-family:var(--font-head);font-size:1.8rem;font-weight:800;color:var(--teal-dark)}
+
+footer.rodape{background:var(--teal-dark);color:#cfe3e1;padding:3rem 0 1.2rem}
+footer.rodape h2{color:#fff;font-size:1.1rem}
+footer.rodape a{color:#fff}
+footer.rodape ul{list-style:none;padding:0;margin:0}
+footer.rodape li{margin-bottom:.3rem}
+footer.rodape .legal{border-top:1px solid rgba(255,255,255,.2);margin-top:1.8rem;padding-top:1rem;font-size:.9rem}
+
+/* 4) Acessibilidade: respeita quem prefere menos movimento */
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+
+/* 5) Modo de alto contraste (ativado pelo botão "Contraste" no topo) */
+body.alto-contraste{background:#000;color:#fff}
+.alto-contraste .navbar-pet,.alto-contraste .card-pet,.alto-contraste .form-pet,.alto-contraste .categoria,
+.alto-contraste .passo,.alto-contraste .titulo-pagina,.alto-contraste .carousel-controles,
+.alto-contraste .slide,.alto-contraste .resumo,.alto-contraste .faixa{background:#000!important;color:#fff!important;border-color:#fff!important}
+.alto-contraste h1,.alto-contraste h2,.alto-contraste h3,.alto-contraste h4,.alto-contraste legend,
+.alto-contraste .preco,.alto-contraste .linha-preco b,.alto-contraste .resumo dt,.alto-contraste .resumo .total,
+.alto-contraste .navbar-brand,.alto-contraste .navbar-pet .nav-link{color:#fff!important}
+.alto-contraste p,.alto-contraste li,.alto-contraste .text-muted-pet,.alto-contraste .slide p,.alto-contraste small{color:#fff!important}
+.alto-contraste a{color:#ffd400}
+.alto-contraste .navbar-pet .nav-link.active,.alto-contraste .navbar-pet .nav-link[aria-current="page"]{background:#ffd400;color:#000!important}
+.alto-contraste .btn-pet{background:#ffd400;color:#000;border-color:#ffd400}
+.alto-contraste .btn-pet-outline{color:#ffd400;border-color:#ffd400}
+.alto-contraste .form-control,.alto-contraste .form-select{background:#000;color:#fff;border-color:#fff}
+.alto-contraste .opcao-servico .btn,.alto-contraste .btn-horario{background:#000;color:#fff;border-color:#fff}
+.alto-contraste .btn-check:checked + .btn,.alto-contraste .btn-check:checked + .btn-horario{background:#ffd400;color:#000;border-color:#ffd400}
+.alto-contraste .note-box{background:#000!important;border:1px solid #fff}
+.alto-contraste footer.rodape{background:#000;border-top:2px solid #fff}

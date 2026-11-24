@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="PetAmigo Petshop: rações, acessórios, higiene e banho e tosa com tele-busca.">
+<title>Acessórios | PetAmigo Petshop</title>
+<!-- Bootstrap 5 (CSS) via CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- Fontes do Google (têm alternativas caso não carreguem) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<!-- Estilos do projeto -->
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="pular" href="#conteudo">Pular para o conteúdo principal</a>
+
+<!-- Barra superior: horário em tempo real e ferramentas de acessibilidade -->
+<div class="barra-topo">
+  <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2 py-2">
+    <span><span id="saudacao">Olá!</span> <span id="status-loja" aria-live="polite">Seg a sáb, 8h às 18h</span></span>
+    <div class="d-flex flex-wrap align-items-center gap-2" role="group" aria-label="Ferramentas de acessibilidade">
+      <button type="button" id="btn-diminuir" class="btn" aria-label="Diminuir tamanho do texto">A-</button>
+      <button type="button" id="btn-aumentar" class="btn" aria-label="Aumentar tamanho do texto">A+</button>
+      <button type="button" id="btn-contraste" class="btn" aria-pressed="false">Alto contraste</button>
+      <a href="https://wa.me/5551999990000">WhatsApp (51) 99999-0000</a>
+    </div>
+  </div>
+</div>
+
+<!-- Cabeçalho com menu de navegação (responsivo) -->
+<header>
+<nav class="navbar navbar-expand-lg navbar-pet" aria-label="Menu principal">
+  <div class="container">
+    <a class="navbar-brand" href="index.html"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><circle cx="24" cy="24" r="24" fill="#f2b134"/><g fill="#0a3533"><ellipse cx="16" cy="21" rx="3" ry="4"/><ellipse cx="23" cy="15" rx="3" ry="4"/><ellipse cx="31" cy="15" rx="3" ry="4"/><ellipse cx="37" cy="21" rx="3" ry="4"/><path d="M25 23c-5 0-9 4-9 8 0 2.5 2.5 3.5 5 2.5 2-.8 3-.8 4-.8s2 0 4 .8c2.5 1 5 0 5-2.5 0-4-4-8-9-8z"/></g></svg>PetAmigo Petshop</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir ou fechar o menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto gap-lg-1"><li class="nav-item"><a class="nav-link" href="index.html">Início</a></li><li class="nav-item"><a class="nav-link" aria-current="page" href="acessorios.html">Acessórios</a></li><li class="nav-item"><a class="nav-link" href="racoes.html">Rações</a></li><li class="nav-item"><a class="nav-link" href="higiene.html">Higiene e limpeza</a></li><li class="nav-item"><a class="nav-link" href="servicos.html">Serviços</a></li><li class="nav-item"><a class="nav-link" href="cadastro.html">Cadastro</a></li><li class="nav-item"><a class="nav-link" href="agendamento.html">Agendamento</a></li><li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li></ul>
+    </div>
+  </div>
+</nav>
+</header>
+
+<main id="conteudo" tabindex="-1">
+<div class="titulo-pagina"><div class="container"><nav aria-label="Você está aqui"><p class="small mb-2"><a href="index.html">Início</a> / Acessórios</p></nav><h1>Acessórios</h1><p class="text-muted-pet mb-0">Roupas, camas e brinquedos para o conforto e a diversão do seu pet.</p></div></div><section class="py-5"><div class="container"><div class="row g-4"><div class="col-md-6"><article class="card-pet d-flex flex-column"><img src="img/roupa-moletom.svg" class="w-100" alt="Moletom laranja para cães, com capuz, cordões brancos e bolso frontal, sobre fundo bege." width="640" height="480" loading="lazy"><div class="p-3 d-flex flex-column flex-grow-1"><h2 class="h4">Moletom para cães</h2><p class="text-muted-pet flex-grow-1">Moletom macio de algodão para os dias frios. Tamanhos P, M e G.</p><p class="preco mb-0"><small>R$</small> 59,90</p></div></article></div>
+<div class="col-md-6"><article class="card-pet d-flex flex-column"><img src="img/cama-pet.svg" class="w-100" alt="Cama oval verde para pets, com borda alta e almofada clara no centro, sobre fundo verde-claro." width="640" height="480" loading="lazy"><div class="p-3 d-flex flex-column flex-grow-1"><h2 class="h4">Cama confortável para pets</h2><p class="text-muted-pet flex-grow-1">Cama acolchoada e lavável, com borda alta. Tamanho M (60 x 50 cm).</p><p class="preco mb-0"><small>R$</small> 129,90</p></div></article></div>
+</div></div></section>
+</main>
+
+<!-- Rodapé -->
+<footer class="rodape">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-5"><h2>PetAmigo Petshop</h2><p>Produtos e cuidados para o seu melhor amigo, com atendimento próximo e tele-busca.</p></div>
+      <div class="col-6 col-lg-3"><h2>Navegação</h2><ul><li><a href="index.html">Início</a></li><li><a href="acessorios.html">Acessórios</a></li><li><a href="racoes.html">Rações</a></li><li><a href="higiene.html">Higiene e limpeza</a></li><li><a href="servicos.html">Serviços</a></li><li><a href="cadastro.html">Cadastro</a></li><li><a href="agendamento.html">Agendamento</a></li><li><a href="contato.html">Contato</a></li></ul></div>
+      <div class="col-6 col-lg-4"><h2>Contato</h2><ul><li>Rua da Paineira, 27, Viamão/RS</li><li>(51) 99999-0000</li><li><a href="mailto:igor.brancher@edu.pucrs.br">igor.brancher@edu.pucrs.br</a></li><li>Seg a sáb, 8h às 18h</li></ul></div>
+    </div>
+    <div class="legal">
+      <p class="mb-1">&copy; <span class="ano-atual">2026</span> PetAmigo Petshop. Todos os direitos reservados.</p>
+      <p class="mb-0">Site desenvolvido por Igor de Araujo Brancher para a disciplina Fundamentos de Sistemas Web. Projeto acadêmico, sem fins comerciais.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap 5 (JavaScript) e scripts do projeto -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
